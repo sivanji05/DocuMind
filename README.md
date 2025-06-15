@@ -31,7 +31,8 @@ documind-fullstack/
 │   │   ├── services/       # S3, ES, Auth, RAG Agent, Parsing
 │   │   ├── utils/          # Helpers and configs
 │   │   └── main.py         # Entry point
-│   └── requirements.txt
+│   └── requirements.txt  
+|   └── .env
 │
 ├── frontend/               # React.js frontend
 │   ├── src/
@@ -86,9 +87,18 @@ git clone https://github.com/your-repo/documind-fullstack.git
 ## ⚙️ Setup Backend
 
 - cd backend
+- create virtual environment
 - pip install -r requirements.txt
+- setup .env file
 - uvicorn app.main:app --reload
-
+## .env
+- DATABASE_URL=postgresql://postgres:password@host.docker.internal:5432/
+- SECRET_KEY=your-secret-key
+- AWS_ACCESS_KEY_ID=your-aws-key
+- AWS_SECRET_ACCESS_KEY=your-aws-secret
+- S3_BUCKET_NAME=your-s3-bucket
+- ELASTICSEARCH_URL=http://elasticsearch:9200
+- OPEN_API_KEY=Your_Api_key
 
 ## 💻 Setup Frontend
 - cd frontend
