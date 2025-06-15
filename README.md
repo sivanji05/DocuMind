@@ -80,14 +80,17 @@ cd documind-fullstack
 
 
 
-### ⚙️ Setup Backend
+## ⚙️ Setup Backend
 
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+- cd backend
+- pip install -r requirements.txt
+- uvicorn app.main:app --reload
 
 
-### 💻 Setup Frontend
-cd frontend
-npm install
-npm start
+## 💻 Setup Frontend
+- cd frontend
+- npm install
+- npm start
+
+## Project BY
+Nooli Sovanji
