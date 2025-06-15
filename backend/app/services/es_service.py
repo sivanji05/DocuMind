@@ -8,57 +8,6 @@ es = Elasticsearch(settings.ELASTICSEARCH_URL)
 INDEX_NAME = "document_index"
 
 
-
-
-
-# def create_index_if_not_exists():
-#     try:
-#         if not es.indices.exists(index=INDEX_NAME):
-#             print(f"Creating index: {INDEX_NAME}")
-#             es.indices.create(index=INDEX_NAME, body={
-#                 "settings": {
-#         "number_of_shards": 1,
-#         "number_of_replicas": 0
-#           },
-#                 "mappings": {
-#                     "properties": {
-#                         "document_id": {"type": "keyword"},
-#                         "chunk_id": {"type": "integer"},
-#                         "content": {"type": "text"},
-#                         "embedding": {
-#                             "type": "dense_vector",
-#                             "dims": 1536,
-#                             "index": True,
-#                             "similarity": "cosine",
-#                             "index_options": {
-#                                 "type": "hnsw"
-#                             }
-#                         }
-#                     }
-#                 }
-#             })
-#     except exceptions.ApiError as e:
-#         print(f"[Elasticsearch] Error creating index: {e}")
-
-
-
-# def create_index_if_not_exists():
-#     if not es.indices.exists(index=INDEX_NAME):
-#         mapping = {
-#             "mappings": {
-#                 "properties": {
-#                     "document_id": {"type": "keyword"},
-#                     "chunk_id": {"type": "integer"},
-#                     "content": {"type": "text"},
-#                     "embedding": {"type": "dense_vector", "dims": 1536}  # adjust dims to match OpenAI model
-#                 }
-#             }
-#         }
-#         es.indices.create(index=INDEX_NAME, body=mapping)
-
-
-
-
 def create_index_if_not_exists():
     mapping = {
         "mappings": {

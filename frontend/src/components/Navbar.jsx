@@ -1,28 +1,3 @@
-// import { Link, useNavigate } from "react-router-dom";
-// import useAuthStore from "../store/auth";
-
-// export default function Navbar() {
-//   const logout = useAuthStore((s) => s.logout);
-//   const navigate = useNavigate();
-
-//   const handleLogout = () => {
-//     logout();
-//     navigate("/");
-//   };
-
-//   return (
-//     <nav className="flex items-center justify-between px-6 py-3 bg-gray-100 shadow">
-//       <h1 className="font-bold text-xl">DocuMind</h1>
-//       <div className="space-x-4">
-//         <Link to="/upload" className="hover:underline">Upload</Link>
-//         <Link to="/chat" className="hover:underline">Chat</Link>
-//         <button onClick={handleLogout} className="text-red-600">Logout</button>
-//       </div>
-//     </nav>
-//   );
-// }
-
-
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar({ token, onLogout }) {
@@ -34,27 +9,6 @@ export default function Navbar({ token, onLogout }) {
   };
 
   return (
-    // <nav className="flex justify-between items-center p-4 bg-gray-100 shadow">
-    //   <div className="text-lg font-bold">
-    //     <Link to="/">MyApp</Link>
-    //   </div>
-    //   <div className="space-x-4">
-    //     {token ? (
-    //       <>
-    //         <Link to="/upload">Upload</Link>
-    //         <Link to="/chat">Chat</Link>
-    //         <button onClick={handleLogoutClick} className="text-red-500">Logout</button>
-    //       </>
-    //     ) : (
-    //       <>
-    //         <Link to="/">Login</Link>
-    //         <Link to="/register">Register</Link>
-    //       </>
-    //     )}
-    //   </div>
-    // </nav>
-
-
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
       <div className="text-2xl font-bold text-indigo-600">
         <Link to="/">DocuMind</Link>

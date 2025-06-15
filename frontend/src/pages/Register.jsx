@@ -27,74 +27,41 @@ export default function Register() {
   };
 
   return (
-    // <div className="min-h-screen flex items-center justify-center bg-gray-100">
-    //   <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-96 space-y-4">
-    //     <h2 className="text-2xl font-semibold text-center">Register</h2>
-    //     {error && <p className="text-red-500 text-sm">{error}</p>}
-    //     <input
-    //       type="email"
-    //       name="email"
-    //       placeholder="Email"
-    //       value={form.email}
-    //       onChange={handleChange}
-    //       required
-    //       className="w-full p-2 border rounded"
-    //     />
-    //     <input
-    //       type="password"
-    //       name="password"
-    //       placeholder="Password"
-    //       value={form.password}
-    //       onChange={handleChange}
-    //       required
-    //       className="w-full p-2 border rounded"
-    //     />
-    //     <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
-    //       Register
-    //     </button>
-    //     <p className="text-center text-sm">
-    //       Already have an account? <a href="/" className="text-blue-600">Login</a>
-    //     </p>
-    //   </form>
-    // </div>
+  <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+    <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md space-y-6">
+      <h2 className="text-3xl font-bold text-center text-gray-800">Register</h2>
 
+      {error && <p className="text-red-600 text-sm text-center">{error}</p>}
 
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        value={form.email}
+        onChange={handleChange}
+        required
+        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
 
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-  <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md space-y-6">
-    <h2 className="text-3xl font-bold text-center text-gray-800">Register</h2>
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        value={form.password}
+        onChange={handleChange}
+        required
+        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
 
-    {error && <p className="text-red-600 text-sm text-center">{error}</p>}
+      <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
+        Register
+      </button>
 
-    <input
-      type="email"
-      name="email"
-      placeholder="Email"
-      value={form.email}
-      onChange={handleChange}
-      required
-      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-    />
-
-    <input
-      type="password"
-      name="password"
-      placeholder="Password"
-      value={form.password}
-      onChange={handleChange}
-      required
-      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-    />
-
-    <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">
-      Register
-    </button>
-
-    <p className="text-center text-sm text-gray-600">
-      Already have an account? <a href="/" className="text-blue-600 hover:underline">Login</a>
-    </p>
-  </form>
-</div>
+      <p className="text-center text-sm text-gray-600">
+        Already have an account? <a href="/" className="text-blue-600 hover:underline">Login</a>
+      </p>
+    </form>
+  </div>
 
   );
 }

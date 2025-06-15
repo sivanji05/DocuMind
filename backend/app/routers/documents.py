@@ -8,7 +8,6 @@ import uuid
 from io import BytesIO
 from typing import List
 from app.services.embedding_service import embedding_model
-# from app.services.auth_service import get_current_user
 from app.services.es_service import semantic_search
 
 router = APIRouter()
@@ -75,35 +74,6 @@ async def upload_document(
         status="PROCESSING",
         created_at=new_doc.created_at
     )
-
-
-
-
-
-# @router.post("/api/documents/ask")
-# async def ask_question(req: AskRequest):
-#     # Step 1: Embed the question
-#     try:
-#         question_embedding = embedding_model.embed_query(req.question)
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=f"Embedding failed: {e}")
-
-#     # Step 2: Perform semantic search
-#     try:
-#         results = semantic_search(question=req.question, document_id=req.document_id)
-#         # Filter results for the selected document_id
-#         filtered = [res for res in results if res.get("document_id") == req.document_id]
-#         if not filtered:
-#             return {"answer": "No relevant chunks found for this document."}
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=f"Search failed: {e}")
-    
-
-    
-
-#     # Step 3: Return top content as "answer" (simplest form)
-#     answer = "\n\n".join([chunk["content"] for chunk in filtered])
-#     return {"answer": answer}
 
 @router.post("/api/documents/ask")
 async def ask_question(req: AskRequest):
