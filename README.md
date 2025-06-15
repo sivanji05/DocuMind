@@ -16,7 +16,7 @@ Deployment	          Docker, Kubernetes
 
 
 
-# documind-fullstack:
+# documind-fullstack: 
 │
 ├── backend/                # FastAPI backend
 │   ├── app/
