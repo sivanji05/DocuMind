@@ -77,3 +77,17 @@ docker-compose up --build
 
 git clone https://github.com/your-repo/documind-fullstack.git
 cd documind-fullstack
+
+
+
+### ⚙️ Setup Backend
+
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+
+
+### 💻 Setup Frontend
+cd frontend
+npm install
+npm start
