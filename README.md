@@ -23,19 +23,22 @@ DocuMind is a secure, scalable, full-stack application that enables users to upl
 
 <pre>
 documind-fullstack/
-├── backend/              # FastAPI backend
+│
+├── backend/                # FastAPI backend
 │   ├── app/
-│   │   ├── api/          # API route handlers
-│   │   ├── models/       # SQLAlchemy models
-│   │   ├── services/     # S3, ES, Auth, RAG Agent, Parsing
-│   │   ├── utils/        # Helpers and configs
-│   │   └── main.py       # Entry point
+│   │   ├── api/            # API route handlers
+│   │   ├── models/         # SQLAlchemy models
+│   │   ├── services/       # S3, ES, Auth, RAG Agent, Parsing
+│   │   ├── utils/          # Helpers and configs
+│   │   └── main.py         # Entry point
 │   └── requirements.txt
-├── frontend/             # React.js frontend
+│
+├── frontend/               # React.js frontend
 │   ├── src/
 │   ├── public/
 │   └── package.json
-├── docker-compose.yml
+│
+├── docker-compose.yml                   
 └── README.md
 </pre>
 
@@ -51,7 +54,7 @@ documind-fullstack/
 
 ### 🤖 Advanced NLP with RAG Agent
 - Contextual Q&A based on uploaded documents.
-- Powered by LangChain + Autogen/CrewAI.
+- Powered by LangChain.
 - Indexed with Elasticsearch and chunked intelligently.
 
 ### 🔐 Authentication
@@ -76,7 +79,7 @@ docker-compose up --build
 ### 📥 Clone the Repository
 
 git clone https://github.com/your-repo/documind-fullstack.git
-cd documind-fullstack
+- cd documind-fullstack
 
 
 
