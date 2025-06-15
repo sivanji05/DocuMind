@@ -1,23 +1,8 @@
-📄 DocuMind — Intelligent Document Query Platform
+# 📄 DocuMind — Intelligent Document Query Platform
 DocuMind is a secure, scalable, full-stack application that enables users to upload, parse, and query documents (PDF, PPT, CSV, etc.) using advanced NLP techniques with a RAG (Retrieval-Augmented Generation) Agent.
 
 
-🚀 Features :
-🧠 Query documents using advanced RAG Agents (Autogen / CrewAI)
-
-🗃️ Upload & manage documents of any format (PDF, PPT, CSV, DOCX, etc.)
-
-🧾 Powerful parsing with unstructured.io
-
-🔎 Semantic search with vector embeddings (Elasticsearch)
-🧩 Modular backend built with FastAPI and LangChain
-🧑‍💼 JWT-based user authentication and session management
-☁️ Cloud storage with AWS S3
-🖼️ Clean and user-friendly UI with React.js
-🐳 Dockerized for easy deployment
-
-
-🏗️ Tech Stack:
+# 🏗️ Tech Stack:
 Layer                	Technology
 ----------            ----------
 Frontend	            React.js, TailwindCSS
@@ -31,7 +16,7 @@ Deployment	          Docker, Kubernetes
 
 
 
-documind-fullstack/
+# documind-fullstack:
 │
 ├── backend/                # FastAPI backend
 │   ├── app/
@@ -52,8 +37,8 @@ documind-fullstack/
 
 
 
-📌 Functional Highlights
-✅ Document Upload and Management
+# 📌 Functional Highlights
+-Document Upload and Management
 -Users can upload documents (PDF, CSV, PPT, etc.)
 -Files stored on AWS S3
 -Metadata stored in PostgreSQL
@@ -62,14 +47,14 @@ documind-fullstack/
 -Chunks indexed in Elasticsearch for semantic retrieval
 
 
-🧠 RAG-based Question Answering:]
+# 🧠 RAG-based Question Answering:]
 
 -User inputs a question
 -Query embedding generated via LangChain
 -Relevant chunks retrieved from Elasticsearch
 -RAG Agent (e.g., CrewAI) generates response from retrieved data
 
-🛡️ Authentication & Authorization:
+# 🛡️ Authentication & Authorization:
 
 -Secure JWT-based authentication
 -Login / Register functionality
@@ -77,9 +62,9 @@ documind-fullstack/
 
 
 
-🧪 Setup Instructions:
+# 🧪 Setup Instructions:
 
-⚙️ Backend:
+# ⚙️ Backend:
 cd backend
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate
@@ -88,24 +73,24 @@ pip install -r requirements.txt
 # Set environment variables in .env
 uvicorn app.main:app --reload
 
-💻 Frontend:
+# 💻 Frontend:
 cd frontend
 npm install
 npm run dev
 
-🐳 Dockerized Setup:
-# At project root
+# 🐳 Dockerized Setup:
+-At project root
 docker-compose up --build
 
 
 
-Includes:
+# Includes:
 
 - FastAPI backend
 
 - React frontend
 
-🧑‍💻 Author
+# 🧑‍💻 Author
 Built by Nooli Sivanji
 
 
