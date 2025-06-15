@@ -87,15 +87,14 @@ docker-compose up --build
 # Includes:
 
 - FastAPI backend
-
 - React frontend
+-  PostgreSQL
+- Elasticsearch
 
 # 🧑‍💻 Author
 Built by Nooli Sivanji
 
 
-- PostgreSQL
 
-- Elasticsearch
 
 
