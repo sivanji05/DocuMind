@@ -10,12 +10,12 @@ DocuMind is a secure, scalable, full-stack application that enables users to upl
 |------------|-----------------------------------------------------------|
 | Frontend   | React.js, TailwindCSS                                     |
 | Backend    | FastAPI, LangChain, Autogen/CrewAI                        |
-| Database   | PostgreSQL, Redis                                         |
-| Storage    | AWS S3 (or equivalent like MinIO)                         |
+| Database   | PostgreSQL                                                |
+| Storage    | AWS S3                                                    |
 | Search     | Elasticsearch                                             |
 | Parsing    | [unstructured.io](https://unstructured.io)               |
-| Auth       | JWT / Session-Based / OAuth2.0                            |
-| Deployment | Docker, Kubernetes                                        |
+| Auth       | JWT / Session-Based                            |
+| Deployment | Docker                                      |
 
 ---
 
