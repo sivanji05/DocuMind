@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - db
+      - es
+
+  db:
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: documind
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  es:
+    image: elasticsearch:8.12.2
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  # Optional: local S3 compatible storage using MinIO
+  minio:
+    image: minio/minio
+    environment:
+      MINIO_ACCESS_KEY: your-aws-access-key
+      MINIO_SECRET_KEY: your-aws-secret
+    command: server /data
+    ports:
+      - "9000:9000"
+    volumes:
+      - minio-data:/data
+
+volumes:
+  pgdata:
+  esdata:
+  minio-data:
