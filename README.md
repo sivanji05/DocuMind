@@ -69,7 +69,11 @@ Run both frontend and backend with:
 docker-compose up --build
 
 
-
+### 📎 Setup Instructions
+Clone repo:
+```bash
+git clone https://github.com/your-repo/documind-fullstack.git
+cd documind-fullstack
 
 
 
