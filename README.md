@@ -72,7 +72,9 @@ docker-compose up --build
 
 ---
 
-### 📎 Setup Instructions
+## 📎 Setup Instructions
+
+### 📥 Clone the Repository
 
 ```bash
 git clone https://github.com/your-repo/documind-fullstack.git
