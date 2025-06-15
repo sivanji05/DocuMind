@@ -9,7 +9,7 @@ Frontend	            React.js, TailwindCSS
 Backend	              FastAPI, LangChain, Autogen/CrewAI
 Database	            PostgreSQL, Redis
 Storage	              AWS S3
-Search	              Elasticsearch
+Search	              Elasticsearch 
 Parsing	              unstructured.io
 Auth	                JWT (or session-based alternatives)
 Deployment	          Docker, Kubernetes
